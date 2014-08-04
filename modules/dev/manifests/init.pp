@@ -1,0 +1,3 @@
+class dev {
+  include tmux
+}
