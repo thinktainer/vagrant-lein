@@ -5,9 +5,9 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "trusty"
-  config.vm.box_url = "file:///Users/martinschinz/Documents/projects/bento/builds/vmware/thinktainer_ubuntu-14.04_puppet.box"
-
+  config.vm.box = "thinktainer/trusty64_vmware-puppet"
+  config.vm.box_download_checksum = "862d5494e97d59708e6a813fdce1bf86c8c957efd887408fc68a9de75e7e520f"
+  config.vm.box_download_checksum_type = "sha256"
   config.vm.provision "shell", inline: "puppet module install puppetlabs-apt"
   
   config.vm.provision "puppet" do |puppet|
