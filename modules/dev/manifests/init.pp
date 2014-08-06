@@ -1,3 +1,5 @@
 class dev {
-  include tmux
+  include dev::tmux
+  include dev::vim
+  include dev::lein
 }
