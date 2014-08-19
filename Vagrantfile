@@ -11,6 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", inline: 
     "puppet module install puppetlabs-apt"
   config.ssh.forward_agent = true
+  config.ssh.forward_x11 = true
   
   config.vm.provision "puppet" do |puppet|
     puppet.manifests_path = ""
