@@ -1,5 +1,6 @@
 class dev {
-  include dev::tmux
-  include dev::vim
+  include dev::packages
   include dev::lein
+  ohmyzsh::install { 'vagrant': }
 }
+
