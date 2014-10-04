@@ -1,0 +1,12 @@
+# Powerline
+export POWERLINE_BINDING="/usr/local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh"
+if [[ -r $POWERLINE_BINDING ]]; then
+	source $POWERLINE_BINDING
+fi
+
+setopt autocd
+setopt autopushd
+setopt cdablevars
+setopt pushdignoredups
+
+source $HOME/.zshenv
