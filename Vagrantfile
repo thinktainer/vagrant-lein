@@ -11,6 +11,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.provision "shell", inline: 
     "puppet module install puppetlabs-apt"
   config.ssh.forward_agent = true
+  config.vm.network "forwarded_port", guest: 45111, host: 45111
 
   config.vm.synced_folder "projects/", "/home/vagrant/projects", create: true
 
