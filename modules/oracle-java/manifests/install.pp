@@ -4,13 +4,14 @@ class oracle-java::install {
     }
 
 
-  package {'oracle-java6-installer':
+  package {'oracle-java8-installer':
     ensure => present
   }
 
-  package { 'oracle-java6-set-default':
+  package { 'oracle-java8-set-default':
     ensure => present
   }
-  Apt::Ppa ['ppa:webupd8team/java'] -> Package['oracle-java6-installer', 'oracle-java6-set-default']
+
+  Apt::Ppa ['ppa:webupd8team/java'] -> Package['oracle-java8-installer', 'oracle-java8-set-default']
 }
 
